@@ -141,9 +141,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int total = c1 + c2 + c3 + c4 + c5 + c6 + c7 + c8 + c9;
                 Intent mIntent = new Intent(MainActivity.this, SecondActivity.class);
+                mIntent.putExtra("1", txt1.getText().toString());
+                mIntent.putExtra("2", txt2.getText().toString());
+                mIntent.putExtra("3", txt3.getText().toString());
+                mIntent.putExtra("4", txt4.getText().toString());
+                mIntent.putExtra("5", txt5.getText().toString());
+                mIntent.putExtra("6", txt6.getText().toString());
+                mIntent.putExtra("7", txt7.getText().toString());
+                mIntent.putExtra("8", txt8.getText().toString());
+                mIntent.putExtra("9", txt9.getText().toString());
                 mIntent.putExtra("name", mText1.getText().toString());
                 mIntent.putExtra("email", mText2.getText().toString());
-                mIntent.putExtra("total", total);
+                mIntent.putExtra("total", total+"");
                 startActivity(mIntent);
             }
         });
