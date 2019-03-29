@@ -1,8 +1,10 @@
 package com.example.evaluacionlabo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -15,7 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9;
 
-    private int c1, c2, c3, c4 ,c5 ,c6 , c7, c8, c9;
+    private int c1, c2, c3, c4 ,c5 ,c6 , c7, c8, c9, cT;
+
+    private Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +35,9 @@ public class MainActivity extends AppCompatActivity {
         c7 = 0;
         c8 = 0;
         c9 = 0;
+        cT = 0;
 
-
+        btn = findViewById(R.id.send);
         mText1 = findViewById(R.id.email);
         mText2 = findViewById(R.id.user);
 
@@ -129,6 +134,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int total = c1 + c2 + c3 + c4 + c5 + c6 + c7 + c8 + c9;
+                Intent mIntent = new Intent(MainActivity.this, SecondActivity.class);
+                mIntent.putExtra("name", mText1.getText().toString());
+                mIntent.putExtra("email", mText2.getText().toString());
+                mIntent.putExtra("total", total);
+                startActivity(mIntent);
+            }
+        });
 
     }
 }

@@ -5,17 +5,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
-    tools:context=".MainActivity">
+    android:padding="10dp">
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Contador de Productos"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:text="Factura"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User: "/>
+
+    <TextView
+        android:id="@+id/user1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correo: "/>
+
+    <TextView
+        android:id="@+id/user2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Productos: "/>
+
+    <TextView
+        android:id="@+id/user3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Total de Productos"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -150,30 +187,30 @@
 
         <LinearLayout
             android:id="@+id/linear5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_weight="33"
-                android:layout_marginRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="33"
+            android:layout_marginRight="5dp"
             android:background="#FF45">
 
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:text="Producto 5"
-                    android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="Producto 5"
+                android:gravity="center"/>
 
-                <TextView
-                    android:id="@+id/txt5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:gravity="center"
-                    android:text="#"/>
+            <TextView
+                android:id="@+id/txt5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:text="#"/>
 
-            </LinearLayout>
+        </LinearLayout>
 
 
         <LinearLayout
@@ -301,41 +338,10 @@
 
     </LinearLayout>
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:padding="10dp"
-       android:orientation="vertical">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Share"/>
 
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Usuario: "/>
-
-       <EditText
-           android:id="@+id/user"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:hint="Escribe el usuario aqui"/>
-
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Email: "/>
-
-       <EditText
-           android:id="@+id/email"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:hint="Escribe el correo aquí"/>
-
-       <Button
-           android:id="@+id/send"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:text="Enviar"/>
-
-
-   </LinearLayout>
 </LinearLayout>
